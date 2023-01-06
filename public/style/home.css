@@ -1,0 +1,32 @@
+
+
+@media (min-width: 760px) {
+    .home_page {
+        padding: 0 5rem;
+        font-family: fanwood;
+        font-style: italic;
+    }
+
+    .home_title {
+        margin: 2rem 0 6rem 0;
+        display: flex;
+        justify-content: center;  
+    }
+}
+
+@media (max-width: 760px) {
+    .home_page {
+        padding: 0 1rem;
+        font-family: fanwood;
+        font-style: italic;
+    }
+
+    .home_title {
+        margin: 2rem 0;
+        display: flex;
+        justify-content: center;  
+    }
+}
+
+
+

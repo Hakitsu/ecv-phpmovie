@@ -1,0 +1,38 @@
+.header {
+    background-color: black;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    
+}
+
+@media (min-width: 760px) {
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 50%;
+        margin: auto;
+       
+    }
+
+}
+
+@media (max-width: 760px) {
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+        
+    }
+
+}
+
+
+a {
+    color: white !important;
+    text-decoration: none;
+   
+}

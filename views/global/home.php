@@ -18,15 +18,16 @@
     </div>
 </div> -->
 
-<div> 
-    <h1>Bienvenue sur la Terre du Milieu ! </h1>
+<div class ="home_page"> 
+    
+    <h1 class="home_title">Bienvenue sur la Terre du Milieu ! </h1>
 
     <p>Découvrez le monde fantastique du Seigneur des Anneaux avec les aventures de Frodon Sacquet dans 
         cet univers aux paysages plus beaux les uns que les autres  </p>
 
         <!-- mettre image de paysages -->
 
-    <h2>Synopsis </h2>
+    <h2>Synopsis: </h2>
     <p>L'histoire commence lorsque, sur la Terre du Milieu, 
         le magicien Gandalf le Gris (Ian McKellen) découvre que l'anneau que possède le jeune Hobbit 
         Frodon Sacquet (Elijah Wood), qui lui a été légué par son oncle Bilbon et qui permet de se rendre 
