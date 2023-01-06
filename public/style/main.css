@@ -1,0 +1,69 @@
+.header {
+    background-color: black;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    
+}
+
+@media (min-width: 760px) {
+
+    .container {
+        padding: 0 5rem;
+        font-family: fanwood;
+        font-style: italic;
+        
+    }
+
+    h1 {
+        margin: 2rem 0 6rem 0;
+        display: flex;
+        justify-content: center; 
+    }
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 50%;
+        margin: auto;
+       
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 760px) {
+    .container {
+        padding: 0 1rem;
+        font-family: fanwood;
+        font-style: italic;
+    }
+
+    h1 {
+        margin: 2rem 0;
+        display: flex;
+        justify-content: center; 
+
+    }
+
+
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+        
+    }
+
+}
+
+
+a {
+    color: white !important;
+    text-decoration: none;
+   
+}
