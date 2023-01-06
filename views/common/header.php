@@ -9,15 +9,15 @@
 </head>
 
 <body class="<?= isset($_GET['id']) ? 'brick' : '' ?>">
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
+<nav >
+    <div>
         <ul>
             <li><a href="./">Accueil</a></li>
             <li><a href="./movies">Les films</a></li>
             <li><a href="./actors">Les acteurs</a></li>
             <li><a href="./galery">Galerie d'images</a></li>
         </ul>
-        <a class="navbar-brand" href="/">Connexion</a>
+        <a  href="/">Connexion</a>
         <!-- <ul class="nav nav-pills">
             <?php
             if (\utils\SessionHelpers::isLogin()) {
