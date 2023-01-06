@@ -15,12 +15,16 @@ class Web
         // Appel la méthode « home » dans le contrôleur $main.
         Route::Add('/', [$main, 'home']);
         Route::Add('/exemple', [$main, 'exemple']);
+        Route::Add('/movies', [$main, 'movies']);
+        Route::Add('/galery', [$main, 'galery']);
+        Route::Add('/actors', [$main, 'actors']);
+        
 
         // Appel la fonction inline dans le routeur.
         // Utile pour du code très simple, où un tes, l'utilisation d'un contrôleur est préférable.
-        Route::Add('/about', function () {
-            return Template::render('views/global/about.php');
-        });
+        // Route::Add('/about', function () {
+        //     return Template::render('views/global/about.php');
+        // });
 
         //        Exemple de limitation d'accès à une page en fonction de la SESSION.
         //        if (SessionHelpers::isLogin()) {
