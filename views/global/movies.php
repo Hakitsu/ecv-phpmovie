@@ -5,6 +5,9 @@
     <?php
         foreach ($movies as $movie) {
     ?>
+    
+    <a href="./movies/movie?id=<?= $movie->id ?>" >
+                               
         <div class="containerMovie">
             <div class="containerImageDesktop">
                 <img class="imgMovies" src="public/assets/landscape2.jpg" >
@@ -29,6 +32,7 @@
             </div>
             
         </div>
+    </a>
                           
                      
     <?php

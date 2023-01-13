@@ -19,8 +19,9 @@
 
 <div class="header">  
     <ul class="nav">
-        <li><a href="./">Accueil</a></li>
-        <li><a href="./movies">Les films</a></li>
-        <li><a href="./actors">Les acteurs</a></li>            <li><a href="./galery">Galerie d'images</a></li>
+        <li><a class="navLink" href="http://localhost/ecv-phpmovie/">Accueil</a></li>
+        <li><a class="navLink" href="http://localhost/ecv-phpmovie/movies">Les films</a></li>
+        <li><a class="navLink" href="http://localhost/ecv-phpmovie/actors">Les acteurs</a></li>            
+        <li><a class="navLink" href="http://localhost/ecv-phpmovie/galery">Galerie d'images</a></li>
     </ul> 
 </div>

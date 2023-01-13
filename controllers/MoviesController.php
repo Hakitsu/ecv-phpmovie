@@ -18,5 +18,14 @@ class MoviesController extends WebController
         return Template::render("views/global/movies.php", array('movies' => $movies)); 
     }
 
+    function movie($id){
+       
+        $movie = $this->moviesModel->findById($id);
+        return Template::render("views/global/movie.php", compact('movie'));
+       
+       
+    }
+
+    
   
 }

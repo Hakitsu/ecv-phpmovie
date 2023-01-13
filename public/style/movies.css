@@ -19,7 +19,6 @@
     .generalInformations {
         width: 90%;
     }
-  
 }
 
 @media (max-width: 760px) {
@@ -61,4 +60,9 @@ h3 {
 .synopsis {
     padding-top: 1rem;
     font-size: 18px;
+}
+
+a {
+    color: black !important;
+    text-decoration: none;   
 }
