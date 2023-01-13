@@ -19,6 +19,7 @@ class Web
         Route::Add('/', [$main, 'home']);
         Route::Add('/exemple', [$main, 'exemple']);
         Route::Add('/movies', [$movies, 'liste']);
+        Route::Add('/movies/movie', [$movies, 'movie']);
         Route::Add('/galery', [$main, 'galery']);
         Route::Add('/actors', [$main, 'actors']);
         
