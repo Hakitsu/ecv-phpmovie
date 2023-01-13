@@ -3,6 +3,7 @@
 namespace routes;
 
 use controllers\SampleWebController;
+use controllers\MoviesController;
 use routes\base\Route;
 use utils\Template;
 
@@ -12,10 +13,12 @@ class Web
     {
         $main = new SampleWebController();
 
+        $movies = new MoviesController();
+
         // Appel la méthode « home » dans le contrôleur $main.
         Route::Add('/', [$main, 'home']);
         Route::Add('/exemple', [$main, 'exemple']);
-        Route::Add('/movies', [$main, 'movies']);
+        Route::Add('/movies', [$movies, 'liste']);
         Route::Add('/galery', [$main, 'galery']);
         Route::Add('/actors', [$main, 'actors']);
         
