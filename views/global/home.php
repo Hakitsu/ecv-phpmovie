@@ -23,9 +23,9 @@
     <h1 >Bienvenue sur la Terre du Milieu ! </h1>
 
     <p>Découvrez le monde fantastique du Seigneur des Anneaux avec les aventures de Frodon Sacquet dans 
-        cet univers aux paysages plus beaux les uns que les autres  </p>
+        cet univers aux paysages plus beaux les uns que les autres. </p>
 
-        <!-- mettre image de paysages -->
+       
     <div class="landscapes">
         <img class="landscape" src="public/assets/lord-of-the-rings-landscape-nature.jpg" >
         <img class="landscape2" src="public/assets/landscape2.jpg" >
