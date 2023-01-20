@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="./public/style/main.css">
     <link rel="stylesheet" href="./public/style/home.css">
     <link rel="stylesheet" href="./public/style/movies.css">
+    <link rel="stylesheet" href="../public/style/main.css">
+    <link rel="stylesheet" href="../public/style/home.css">
+    <link rel="stylesheet" href="../public/style/movies.css">
+   
 
 </head>
 

@@ -4,6 +4,7 @@ namespace routes;
 
 use controllers\SampleWebController;
 use controllers\MoviesController;
+use controllers\ActorsController;
 use routes\base\Route;
 use utils\Template;
 
@@ -15,13 +16,15 @@ class Web
 
         $movies = new MoviesController();
 
+        $actors = new ActorsController();
+
         // Appel la méthode « home » dans le contrôleur $main.
         Route::Add('/', [$main, 'home']);
         Route::Add('/exemple', [$main, 'exemple']);
         Route::Add('/movies', [$movies, 'liste']);
         Route::Add('/movies/movie', [$movies, 'movie']);
         Route::Add('/galery', [$main, 'galery']);
-        Route::Add('/actors', [$main, 'actors']);
+        Route::Add('/actors', [$actors, 'liste']);
         
 
         // Appel la fonction inline dans le routeur.
