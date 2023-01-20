@@ -21,9 +21,12 @@ class MoviesController extends WebController
     function movie($id){
        
         $movie = $this->moviesModel->findById($id);
-        return Template::render("views/global/movie.php", compact('movie'));
-       
-       
+        return Template::render("views/global/movie.php", compact('movie'));  
+    }
+
+    function galeryByMovie($id){
+        $galeryByMovie = $this->moviesModel->findGaleryByMovie($id);
+        return Template::render("views/global/movie.php",  array('galeryByMovie' => $galeryByMovie));  
     }
 
     

@@ -16,11 +16,6 @@ class ActorsModel extends SQL
         WHERE movies.id = link_movie_actors.id_movie
         AND link_movie_actors.id_actor = actors.id order by actors.actors_name";
 
-       
-
-      
-        
-
         $query = $this->getPdo()->prepare($sql );
         $query->execute();
         return $query->fetchAll(\PDO::FETCH_OBJ); 
