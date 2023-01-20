@@ -18,13 +18,24 @@ class MoviesModel extends SQL
     }
 
     public function findById(string $id){
-        $sql = "SELECT * FROM movies INNER JOIN link_movie_actors INNER JOIN actors 
+        $sql = "SELECT * FROM movies INNER JOIN link_movie_actors INNER JOIN actors
         WHERE movies.id = link_movie_actors.id_movie
-        AND link_movie_actors.id_actor = actors.id
+        AND link_movie_actors.id_actor = actors.id 
         AND movies.id = {$id}";
         $query = $this->getPdo()->prepare($sql );
         $query->execute();
         return $query->fetchAll(\PDO::FETCH_OBJ);    
+    }
+
+    public function findGaleryByMovie(string $id){
+        $sql = "SELECT * FROM movies INNER JOIN movies_images
+        WHERE movies_images.id_movie = movies.id
+        AND movies.id = {$id}";
+
+        $query = $this->getPdo()->prepare($sql );
+        $query->execute();
+        return $query->fetchAll(\PDO::FETCH_OBJ); 
+
     }
 
 }

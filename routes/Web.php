@@ -5,6 +5,8 @@ namespace routes;
 use controllers\SampleWebController;
 use controllers\MoviesController;
 use controllers\ActorsController;
+
+use controllers\GaleryController;
 use routes\base\Route;
 use utils\Template;
 
@@ -18,12 +20,18 @@ class Web
 
         $actors = new ActorsController();
 
+        $galery = new GaleryController();
+
         // Appel la méthode « home » dans le contrôleur $main.
         Route::Add('/', [$main, 'home']);
         Route::Add('/exemple', [$main, 'exemple']);
         Route::Add('/movies', [$movies, 'liste']);
         Route::Add('/movies/movie', [$movies, 'movie']);
-        Route::Add('/galery', [$main, 'galery']);
+        //  Route::Add('/movies/movie', array(
+        //         $movies => "movie",
+        //         $galeryByMovie     => "galeryByMovie",
+        //     ));
+        Route::Add('/galery', [$galery, 'liste']);
         Route::Add('/actors', [$actors, 'liste']);
         
 

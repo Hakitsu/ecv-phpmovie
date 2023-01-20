@@ -4,7 +4,6 @@
 
     <?php
         foreach ($movies as $movie) {
-           
     ?>
     
     <a href="./movies/movie?id=<?= $movie->id ?>" >                        

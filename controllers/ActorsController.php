@@ -7,7 +7,7 @@ use utils\Template;
 
 class ActorsController extends WebController
 {
-    private $actorssModel;
+    private $actorsModel;
 
     function __construct(){
         $this->actorsModel = new ActorsModel();
