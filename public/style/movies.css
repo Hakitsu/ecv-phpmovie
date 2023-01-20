@@ -1,6 +1,6 @@
 @media (min-width: 760px) {
     .imgMovies{
-        max-width: 100%;
+        max-width: 15rem;
         height: auto;
         padding-right: 2rem;
         
@@ -18,6 +18,13 @@
 
     .generalInformations {
         width: 90%;
+    }
+
+    .banner {
+        width: 80%;
+       margin: auto;
+       display: flex;
+       padding-bottom: 3rem;
     }
 }
 
@@ -40,10 +47,13 @@
         height: auto;
          
     }
-
     .containerImageMobile {
         padding: 1rem 1rem;
     } 
+
+    .banner {
+        width: 100%;
+    }
 }
 
 
