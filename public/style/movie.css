@@ -1,5 +1,4 @@
 @media (min-width: 760px) {
-    
     .banner {
         width: 80%;
         margin: auto;
@@ -9,7 +8,6 @@
 
     .actor_picture_movie {
         width: 30%;
-
     }
 
     .actor{
@@ -45,15 +43,16 @@
     }
 
     .actor_picture_movie {
-        width: 30%
+        width: 15rem;
+    }
+
+    .actor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2rem;
     }
 }
 
-
-h3 {
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: underline;
-}
 
 

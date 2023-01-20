@@ -2,8 +2,7 @@
     .imgMovies{
         max-width: 15rem;
         height: auto;
-        padding-right: 2rem;
-        
+        padding-right: 2rem;  
     }
 
     .containerImageMobile{
@@ -56,12 +55,6 @@
     }
 }
 
-
-h3 {
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: underline;
-}
 
 .synopsisTitle {
     font-weight: bold;

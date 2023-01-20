@@ -11,11 +11,21 @@
         <?php if($i === 0){ ?>
                 <img  class="actor_picture_first" src="<?= './'.$actors[$i]->actors_picture ?>" >
 
-                <p>Nom:  <?= $actors[$i]->actors_name ?> </p> 
+                <p class="text_actor"> 
+                    <span class="movieTitle">Nom: </span> 
+                    <?= $actors[$i]->actors_name ?> 
+                </p> 
                 
-                <p>Rôle: <?= $actors[$i]->actors_role ?></p>
                 
-                <p>Films:  <?= $actors[$i]->name ?> </p> 
+                <p class="text_actor">  
+                    <span class="movieTitle">Rôle: </span> 
+                    <?= $actors[$i]->actors_role ?>
+                </p>
+                
+                <span class="movieTitlemovie">Films: </span>
+                <p class="text_actor"> 
+                  -  <?= $actors[$i]->name ?> 
+                </p> 
                        
         <?php } ?>
             
@@ -24,17 +34,26 @@
             
             <img  class="actor_picture" src="<?= './'. $actors[$i]->actors_picture ?>" >
 
-            <p>Nom:  <?= $actors[$i]->actors_name ?> </p> 
-                
-            <p>Rôle: <?= $actors[$i]->actors_role ?></p>
-                
-            <p>Films:  <?= $actors[$i]->name ?> </p> 
+            <p class="text_actor"> 
+                <span class="movieTitle">Nom: </span> 
+                <?= $actors[$i]->actors_name ?> 
+            </p> 
+            
+            <p class="text_actor">  
+                <span class="movieTitle">Rôle: </span> 
+                <?= $actors[$i]->actors_role ?>
+            </p>
+             
+            <span class="movieTitlemovie">Films: </span>
+            <p class="text_actor"> 
+                - <?= $actors[$i]->name ?> 
+            </p> 
                 
                                     
         <?php } ?>     
         
         <?php if($i !== 0 && $actors[$i]->actors_name === $actors[$i-1]->actors_name)  {?>
-            <p>  <?= $actors[$i]->name ?> </p> 
+            <p class="text_actor">  - <?= $actors[$i]->name ?> </p> 
         <?php } ?> 
 
        
