@@ -1,15 +1,24 @@
-.picture_galery:hover
-{
-   transform: scale(1.2);
-   transition: 1s;
+@media (min-width: 760px) {
+   .picture_galery:hover{
+      transform: scale(1.2);
+      transition: 1s;
+   }
+   
+   .picture_galery:not(:hover){
+      transition: 0.5s;
+   }
+   
+   .picture_galery{
+       width: 30rem;
+       margin: 0.25rem;
+   }
 }
 
-.picture_galery:not(:hover)
-{
-   transition: 0.5s;
-}
-
-.picture_galery{
-    width: 30rem;
-    margin: 0.25rem;
+@media (max-width: 760px) {
+   .picture_galery{
+      width: 20rem;
+      display: flex;
+      margin: 1rem;
+  }
+   
 }
