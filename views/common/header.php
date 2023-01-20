@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="./public/style/movie.css">
     <link rel="stylesheet" href="../public/style/actors.css">
     <link rel="stylesheet" href="./public/style/actors.css">
+    <link rel="stylesheet" href="../public/style/galery.css">
+    <link rel="stylesheet" href="./public/style/galery.css">
    
 
 </head>
