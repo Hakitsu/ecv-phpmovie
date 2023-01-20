@@ -12,7 +12,7 @@ class MoviesModel extends SQL
 
 
     function getAllMovies(){
-        $stmt = $this->getPdo()->prepare("SELECT id, name, date, synospsis FROM movies");
+        $stmt = $this->getPdo()->prepare("SELECT id, name, date, synospsis, picture_movie FROM movies");
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_OBJ);
     }

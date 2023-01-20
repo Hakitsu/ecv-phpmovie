@@ -4,20 +4,20 @@
 
     <?php
         foreach ($movies as $movie) {
+           
     ?>
     
-    <a href="./movies/movie?id=<?= $movie->id ?>" >
-                               
+    <a href="./movies/movie?id=<?= $movie->id ?>" >                        
         <div class="containerMovie">
             <div class="containerImageDesktop">
-                <img class="imgMovies" src="public/assets/landscape2.jpg" >
+                <img class="imgMovies" src="<?='./'.$movie->picture_movie ?>" >
             </div>
             <div class="generalInformations">
                 <h3 class="title"> 
                     <?= $movie->name ?> 
                 </h3>
                 <div class="containerImageMobile">
-                    <img class="imgMovies" src="public/assets/landscape2.jpg" >
+                    <img class="imgMovies" src="<?='./'.$movie->picture_movie ?>" >
                 </div>
                 <span> 
                     date de sortie : <?= $movie->date ?>
