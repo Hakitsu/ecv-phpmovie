@@ -5,6 +5,7 @@ namespace routes;
 use controllers\SampleWebController;
 use controllers\MoviesController;
 use controllers\ActorsController;
+use controllers\UserController;
 use routes\base\Route;
 use utils\Template;
 
@@ -25,6 +26,7 @@ class Web
         Route::Add('/movies/movie', [$movies, 'movie']);
         Route::Add('/galery', [$main, 'galery']);
         Route::Add('/actors', [$actors, 'liste']);
+        Route::Add('/connexion',[$main, 'connexion']);
         
 
         // Appel la fonction inline dans le routeur.
