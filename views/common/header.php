@@ -31,5 +31,22 @@
         <li><a class="navLink" href="http://localhost/ecv-phpmovie/movies">Les films</a></li>
         <li><a class="navLink" href="http://localhost/ecv-phpmovie/actors">Les acteurs</a></li>            
         <li><a class="navLink" href="http://localhost/ecv-phpmovie/galery">Galerie d'images</a></li>
+        <?php
+        if (empty($_SESSION)) {
+        ?>
+            <li><a class="navLink" href="http://localhost/ecv-phpmovie/connexion">connexion</a></li>
+        <?php
+        }else{
+            if ($_SESSION['role'] == 'Admin') {
+            ?>
+                <li><a class="navLink" href="http://localhost/ecv-phpmovie/admin">Admin</a></li>
+            <?php
+            }
+        ?>
+            <li><a class="navLink" href="http://localhost/ecv-phpmovie/deconnexion">Deconnexion</a></li>
+        <?php
+        }
+        ?>
+        
     </ul> 
 </div>

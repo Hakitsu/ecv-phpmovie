@@ -19,6 +19,8 @@ class Web
 
         $actors = new ActorsController();
 
+        $users = new UserController();
+
         // Appel la méthode « home » dans le contrôleur $main.
         Route::Add('/', [$main, 'home']);
         Route::Add('/exemple', [$main, 'exemple']);
@@ -27,6 +29,8 @@ class Web
         Route::Add('/galery', [$main, 'galery']);
         Route::Add('/actors', [$actors, 'liste']);
         Route::Add('/connexion',[$main, 'connexion']);
+        Route::Add('/check_connexion',[$users, 'connexion']);
+        Route::Add('/deconnexion',[$users, 'deconnexion']);
         
 
         // Appel la fonction inline dans le routeur.

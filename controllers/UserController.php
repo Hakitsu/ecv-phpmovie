@@ -24,24 +24,31 @@ class UserController extends WebController
         }
     }
 
-    function connexion($username,$password){
+    function connexion(){
+        $username = $_POST['username'];
+        $get_password = $_POST['password'];
         $login = $this->userModel->sessionUser($username);
         $user = $login->fetch(PDO::FETCH_OBJ);
-        if (!$user) {
-            
+        if (!$user) {            
+            header("Location: connexion");
         }else{
+            var_dump($user);
             $mdp = $user->password;
-            if ($mdp == $password) {
+            if ($mdp == $get_password) {
+                //security
+                session_destroy();
                 session_start();
                 $_SESSION['login'] = $username;
                 $_SESSION['role'] = $user->role;
-                return Template::render("views/global/home.php");
+                header("Location: ./");
+            }else{
+                header("Location: connexion");
             }
         }
     }
 
     function deconnexion(){
         session_destroy();
-        return Template::render("views/global/home.php");
+        header("Location: ./");
     }
 }
