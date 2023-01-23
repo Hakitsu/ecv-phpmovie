@@ -35,8 +35,8 @@ class SampleWebController extends WebController
     {
         return Template::render("views/global/connexion.php");
     }
-    function check_connexion()
+    function register()
     {
-        return Template::render("views/global/check_connexion.php");
+        return Template::render("views/global/register.php");
     }
 }

@@ -1,6 +1,6 @@
-<form action="check_connexion" method="post">
+<form action="create_register" method="post">
     <div>
-        <label for="name">Nom :</label>
+        <label for="name">Pseudo :</label>
         <input type="text" id="name" name="username">
     </div>
     <div>
@@ -9,4 +9,3 @@
     </div>
     <input type="submit">
 </form>
-<a href="register">créer un compte</a>

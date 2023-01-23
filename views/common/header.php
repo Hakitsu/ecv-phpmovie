@@ -34,7 +34,7 @@
         <?php
         if (empty($_SESSION)) {
         ?>
-            <li><a class="navLink" href="http://localhost/ecv-phpmovie/connexion">connexion</a></li>
+            <li><a class="navLink" href="http://localhost/ecv-phpmovie/connexion">Connexion</a></li>
         <?php
         }else{
             if ($_SESSION['role'] == 'Admin') {

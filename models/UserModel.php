@@ -18,8 +18,9 @@ class UserModel extends SQL
   }
 
   function registerUser($username,$password){
-    $sql = "INSERT INTO users (username, `password`, `role`)VALUES  ?, ?, user";
-    $query = $this->getpdo()->prepare($sql)->execute(array($username,$password));
+    $sql = "INSERT INTO `users`(`username`, `password`, `role`) VALUES ('$username','$password','user')";
+    $query = $this->getPdo()->prepare($sql);
+    $query->execute();
     return $query;
   }
 }

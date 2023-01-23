@@ -14,13 +14,14 @@ class UserController extends WebController
         $this->userModel = new UserModel();
     }
 
-    function addUser($username, $password){
+    function addUser(){
+        $username = $_POST['username'];
+        $password = $_POST['password'];
         $user = $this->userModel->registerUser($username, $password);
         if ($user == false) {
-            echo "<script>alert(\"Inscription impossible ! Le pseudo que vous tentez de prendre est peut-être déjà utilisé....\");
-        document.location.href = '/index.php?action=newUser'</script>";
+            header('Location: register');
         }else{
-            return Template::render("views/global/home.php");
+            header('Location: connexion');
         }
     }
 
