@@ -39,6 +39,7 @@ class Web
         Route::Add('/deconnexion',[$users, 'deconnexion']);
         Route::Add('/register',[$main, 'register']);
         Route::Add('/create_register',[$users, 'addUser']);
+        Route::Add('/admin',[$main, 'admin']);
         
 
         // Appel la fonction inline dans le routeur.

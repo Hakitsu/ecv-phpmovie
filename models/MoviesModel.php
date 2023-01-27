@@ -18,9 +18,11 @@ class MoviesModel extends SQL
     }
 
     public function findById(string $id){
-        $sql = "SELECT * FROM movies INNER JOIN link_movie_actors INNER JOIN actors
+        $sql = "SELECT * FROM movies INNER JOIN link_movie_actors INNER JOIN actors INNER JOIN comments INNER JOIN movies_images INNER JOIN users
         WHERE movies.id = link_movie_actors.id_movie
-        AND link_movie_actors.id_actor = actors.id 
+        AND link_movie_actors.id_actor = actors.id
+        AND movies.id = movies_images.id_movie
+        AND movies.id = comments.id_movie
         AND movies.id = {$id}";
         $query = $this->getPdo()->prepare($sql );
         $query->execute();
