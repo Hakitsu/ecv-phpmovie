@@ -90,16 +90,27 @@
         ?>
     </div>
 
-    <h3>Commentaires (<?php echo count($comments['comment']);?>)</h3>
+    <h3>Commentaires (
+        <?php
+        if (!empty($comments['comment'][0])) {
+            echo count($comments['comment']);
+        } else {
+            echo '0';
+        }
+        ?>
+        )
+    </h3>
     <div class="comments">
         <?php
+            $get_username = '';
             for ($i=0; $i < count($comments['comment']); $i++) {
                 if (in_array($comments['id_user'][$i],$users['id_user'])) {
                     $pos = array_search($comments['id_user'][$i],$users['id_user']);
                     $get_username = $users['username'][$pos];
                 }
-                
+        if (!empty($get_username)) {
         ?>
+        
             <div class="commentContainer">
                 <p class="user"><?php echo $get_username ?> </p>
                 <div class="comment">
@@ -108,7 +119,8 @@
             </div>
 
         <?php
-            }
+            }        
+        }
         ?>
 
     </div>                 
