@@ -39,6 +39,12 @@
         border-radius: 10px;
     }
 
+    .submitButton:hover {
+        background-color: black;
+        color: white;  
+    }
+
+
     input {
         border: none;
         border-bottom: 1px solid gray; 
@@ -47,10 +53,6 @@
     input::placeholder {
         color: rgb(194, 178, 178);
         font-size: 12px;
-    }
-
-    input:focus {
-        border: 0px;
     }
 
     .registerLink {
@@ -98,6 +100,11 @@
         border-radius: 10px;
     }
 
+    .submitButton:hover {
+        background-color: black;
+        color: white;  
+    }
+
     input {
         border: none;
         border-bottom: 1px solid gray; 
@@ -106,10 +113,6 @@
     input::placeholder {
         color: rgb(194, 178, 178);
         font-size: 12px;
-    }
-
-    input:focus {
-        border: 0px;
     }
 
     .registerLink {
