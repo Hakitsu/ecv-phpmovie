@@ -9,12 +9,12 @@
             
             <div class="inputConnexionContainer">
                 <label for="name">Pseudo :</label>
-                <input type="text" id="name" name="username">
+                <input type="text" id="name" name="username" placeholder="Quentin">
             </div>
 
             <div class="inputConnexionContainer">
                 <label for="msg">Mot de passe :</label>
-                <input type="password" id="passsword" name="password"></input>
+                <input type="password" id="passsword" name="password" placeholder="motdepasse1234"></input>
                 <input type="submit" value="Je m'inscris" class="submitButton" >
             </div>
         </form>
