@@ -100,9 +100,7 @@
                 }
                 
         ?>
-            <div class="actor">
-                
-                <div class="commentContainer">
+            <div class="commentContainer">
                 <p class="user"><?php echo $get_username ?> </p>
                 <div class="comment">
                     <?php echo $comments['comment'][$i] ?>
@@ -112,7 +110,7 @@
         <?php
             }
         ?>
-    </div>
-</div>                 
+
+    </div>                 
    
 </div>
