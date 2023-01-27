@@ -31,4 +31,12 @@ class SampleWebController extends WebController
     {
         return Template::render("views/global/actors.php");
     }
+    function connexion()
+    {
+        return Template::render("views/global/connexion.php");
+    }
+    function register()
+    {
+        return Template::render("views/global/register.php");
+    }
 }
