@@ -1,0 +1,120 @@
+@media (min-width: 760px) {   
+    .connexion {
+        display: flex;
+        flex-direction: row;
+        font-family: fanwood;
+        font-style: italic;    
+    }
+
+    .containerIllustrationConnexion {
+        width: 70%;
+    }
+
+    .illustrationConnexion {
+        width: 100%;
+        height: auto;
+    }
+
+    .cardConnexion {
+        display: flex;
+        flex-direction: column;
+        width: 100%;   
+    }
+
+    .inputConnexionContainer {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding-bottom: 2rem;
+        width: 50%;
+    }
+
+    .submitButton {
+        width: 100%;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        border: 1px solid grey;
+        background-color: white;
+        padding: 0.5rem;
+        border-radius: 10px;
+    }
+
+    input {
+        border: none;
+        border-bottom: 1px solid gray; 
+    }
+
+    input::placeholder {
+        color: rgb(194, 178, 178);
+        font-size: 12px;
+    }
+
+    input:focus {
+        border: 0px;
+    }
+
+    .registerLink {
+        margin: 0 auto;
+    }
+ }
+ 
+ @media (max-width: 760px) {
+    .connexion {
+        display: flex;
+        flex-direction: row;
+        font-family: fanwood;
+        font-style: italic;  
+    }
+
+    .containerIllustrationConnexion {
+        display: none;
+    }
+
+    .illustrationConnexion {
+        display: none;
+    }
+
+    .cardConnexion {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .inputConnexionContainer {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding-bottom: 2rem;
+        width: 80%;
+    }
+
+    .submitButton {
+        width: 100%;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        border: 1px solid grey;
+        background-color: white;
+        padding: 0.5rem;
+        border-radius: 10px;
+    }
+
+    input {
+        border: none;
+        border-bottom: 1px solid gray; 
+    }
+
+    input::placeholder {
+        color: rgb(194, 178, 178);
+        font-size: 12px;
+    }
+
+    input:focus {
+        border: 0px;
+    }
+
+    .registerLink {
+        margin: 0 auto;
+    }
+   
+ }
+ 

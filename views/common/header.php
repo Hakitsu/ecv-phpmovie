@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="./public/style/actors.css">
     <link rel="stylesheet" href="../public/style/galery.css">
     <link rel="stylesheet" href="./public/style/galery.css">
+    <link rel="stylesheet" href="../public/style/connexion.css">
+    <link rel="stylesheet" href="./public/style/connexion.css">
    
 
 </head>
