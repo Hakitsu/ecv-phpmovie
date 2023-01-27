@@ -39,4 +39,8 @@ class SampleWebController extends WebController
     {
         return Template::render("views/global/register.php");
     }
+    function admin()
+    {
+        return Template::render("views/global/admin.php");
+    }
 }
