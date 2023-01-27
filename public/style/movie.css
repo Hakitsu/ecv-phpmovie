@@ -14,7 +14,7 @@
         min-width: 30rem;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        padding-left: 6rem;
         flex-wrap: wrap;
         padding-top: 2rem;
         padding-bottom: 2rem;
@@ -26,9 +26,36 @@
 
     .container_actors {
         display: grid;
-        grid-template-columns: repeat(auto-fill,minmax(30rem, 1fr));
+        grid-template-columns: repeat(auto-fill,minmax(20rem, 1fr));
        
     }
+
+    .container_galery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(30rem, 2fr));
+      
+    }
+
+    .picture_galery_in_movie {
+        padding: 1rem 0.5rem 0 0.5rem ;
+        width: 100%;
+        height: auto;
+    }
+
+    .commentContainer {
+        background-color: rgb(245, 241, 241);
+        width: 40%;
+        padding: 1rem;
+        margin: 1rem;
+        border-radius: 10px;
+    }
+
+    .user {
+        padding-bottom: 0.5rem;
+        font-weight: 700;
+    }
+
+
 
     
 }
@@ -52,6 +79,26 @@
         align-items: center;
         padding-top: 2rem;
     }
+
+    .picture_galery_in_movie {
+        padding: 1rem 0.5rem 0 0.5rem ;
+        width: 100%;
+        height: auto;
+    }
+
+    .commentContainer {
+        background-color: rgb(245, 241, 241);
+        width: 100%;
+        padding: 1rem;
+        margin:  1.25rem auto;
+        border-radius: 10px;
+    }
+
+    .user {
+        padding-bottom: 0.5rem;
+        font-weight: 700;
+    }
+
 }
 
 
