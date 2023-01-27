@@ -52,8 +52,7 @@
     </h1>
     
     <img  class="banner" src="<?= '../'.$movie[0]->picture_banner ?>" >
-    <!-- <?php echo '<iframe class="bo" width="560" height="315" src="' . $movie[0]->trailer . '" frameborder="0" allowfullscreen></iframe>';
-    ?> -->
+   
     <h3>Résumé: </h3>
     <p>
         <?= $movie[0]->story ?>
@@ -77,12 +76,13 @@
         <?php } ?>
     </div> 
 
-    <div class="container_picture">
+    <h3>Galerie du film </h3>
+    <div class="container_galery">
         <?php
             for ($i=0; $i < count($pictures_link); $i++) {
         ?>
-            <div class="movie">
-                <img  class="actor_picture_movie" src="<?= '../'.$pictures_link[$i] ?>" >
+            <div class="picture_galery_in_movie">
+                <img  class="picture_galery_in_movie" src="<?= '../'.$pictures_link[$i] ?>" >
             </div>
 
         <?php
@@ -90,10 +90,8 @@
         ?>
     </div>
 
-    <div class="container_picture">
-            <div>
-                Commentaire (<?php echo count($comments['comment']);?>)
-            </div>
+    <h3>Commentaires (<?php echo count($comments['comment']);?>)</h3>
+    <div class="comments">
         <?php
             for ($i=0; $i < count($comments['comment']); $i++) {
                 if (in_array($comments['id_user'][$i],$users['id_user'])) {
@@ -103,23 +101,18 @@
                 
         ?>
             <div class="actor">
-                <div class="">Username : <?php echo $get_username ?> </div>
-                <div class=""><?php echo $comments['comment'][$i] ?></div>
+                
+                <div class="commentContainer">
+                <p class="user"><?php echo $get_username ?> </p>
+                <div class="comment">
+                    <?php echo $comments['comment'][$i] ?>
+                </div>
             </div>
 
         <?php
             }
         ?>
     </div>
-</div>
-    
-    
-    
-                          
-                     
-   
-   
-
-                     
+</div>                 
    
 </div>
