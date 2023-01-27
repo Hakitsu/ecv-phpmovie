@@ -5,11 +5,15 @@
         'picture' => array()
     );
     $pictures_link = array();
-    $users = array();
+    $users = array(
+        'id_user' => array(),
+        'username' => array()
+    );
     $comments = array(
         'id_user' => array(),
         'comment' => array()
     );
+
     foreach ($movie as $param) {
         $actors_name = $param->actors_name;
         $actors_picture = $param->actors_picture;
@@ -30,8 +34,9 @@
         }
 
         $user = $param->username;
-        if (!in_array($user,$users)) {
-            array_push($users,$user);
+        if (!in_array($user,$users['username'])) {
+            array_push($users['username'],$user);
+            array_push($users['id_user'],count($users['username']));
         }
 
         $user_comment = $param->comment;
@@ -42,7 +47,6 @@
     }
 ?>
 <div class="container">
-
     <h1>    
         <?= $movie[0]->name ?>
     </h1>
@@ -87,10 +91,19 @@
     </div>
 
     <div class="container_picture">
+            <div>
+                Commentaire (<?php echo count($comments['comment']);?>)
+            </div>
         <?php
             for ($i=0; $i < count($comments['comment']); $i++) {
+                if (in_array($comments['id_user'][$i],$users['id_user'])) {
+                    $pos = array_search($comments['id_user'][$i],$users['id_user']);
+                    $get_username = $users['username'][$pos];
+                }
+                
         ?>
             <div class="actor">
+                <div class="">Username : <?php echo $get_username ?> </div>
                 <div class=""><?php echo $comments['comment'][$i] ?></div>
             </div>
 
