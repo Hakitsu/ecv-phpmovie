@@ -1,4 +1,4 @@
-<form action="" type="post">
+<form action="create_movie" method="post">
     <div class="inputConnexionContainer">
         <label for="name">Nom :</label>
         <input type="text" id="name" name="name" placeholder="">
@@ -17,17 +17,17 @@
 
     <div class="inputConnexionContainer">
         <label for="picture_movie">Lien url photo :</label>
-        <input type="url" id="picture_movie" name="picture_movie" placeholder=""></input>
+        <input type="text" id="picture_movie" name="picture_movie" placeholder=""></input>
     </div>
 
     <div class="inputConnexionContainer">
         <label for="picture_banner">Lien url bannanière :</label>
-        <input type="url" id="picture_banner" name="picture_banner" placeholder=""></input>
+        <input type="text" id="picture_banner" name="picture_banner" placeholder=""></input>
     </div>
 
     <div class="inputConnexionContainer">
         <label for="trailer">Lien url bande-annonce :</label>
-        <input type="url" id="trailer" name="trailer" placeholder=""></input>
+        <input type="text" id="trailer" name="trailer" placeholder=""></input>
     </div>
 
     <div class="inputConnexionContainer">

@@ -42,8 +42,14 @@ class MoviesModel extends SQL
     }
 
     public function createMovie($name, $date, $synospsis, $picture_movie, $picture_banner, $trailer, $story){
-        $sql = "INSERT INTO `movies`(`name`, `date`, `synospsis`, `picture_movie`, `picture_banner`, `trailer`, `story`) 
-                             VALUES ('$name','$date','$synospsis','$picture_movie','$picture_banner','$trailer','$story')";
+        $get_id_request = "SELECT * FROM movies";
+        $get_id = $this->getPdo()->prepare($get_id_request);
+        $get_id->execute();
+        $id = $get_id->rowCount();
+        $id += 1;
+
+        $sql = "INSERT INTO `movies`(`id`,`name`, `date`, `synospsis`, `picture_movie`, `picture_banner`, `trailer`, `story`) 
+                             VALUES ('$id','$name','$date','$synospsis','$picture_movie','$picture_banner','$trailer','$story')";
         $query = $this->getPdo()->prepare($sql);
         $query->execute();
     return $query;
