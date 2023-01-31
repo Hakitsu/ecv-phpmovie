@@ -43,4 +43,16 @@ class SampleWebController extends WebController
     {
         return Template::render("views/global/admin.php");
     }
+    function add_movie()
+    {
+        return Template::render("views/global/add_movie.php");
+    }
+    function update_movie()
+    {
+        return Template::render("views/global/update_movie.php");
+    }
+    function delete_movie()
+    {
+        return Template::render("views/global/delete_movie.php");
+    }
 }

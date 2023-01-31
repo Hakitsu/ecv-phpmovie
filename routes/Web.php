@@ -40,6 +40,9 @@ class Web
         Route::Add('/register',[$main, 'register']);
         Route::Add('/create_register',[$users, 'addUser']);
         Route::Add('/admin',[$main, 'admin']);
+        Route::Add('/add_movie',[$main, 'add_movie']);
+        Route::Add('/delete_movie',[$main, 'delete_movie']);
+        Route::Add('/update_movie',[$main, 'update_movie']);
         
 
         // Appel la fonction inline dans le routeur.
