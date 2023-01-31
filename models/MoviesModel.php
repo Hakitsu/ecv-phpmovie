@@ -41,4 +41,35 @@ class MoviesModel extends SQL
 
     }
 
+    public function createMovie($name, $date, $synospsis, $picture_movie, $picture_banner, $trailer, $story){
+        $sql = "INSERT INTO `movies`(`name`, `date`, `synospsis`, `picture_movie`, `picture_banner`, `trailer`, `story`) 
+                             VALUES ('$name','$date','$synospsis','$picture_movie','$picture_banner','$trailer','$story')";
+        $query = $this->getPdo()->prepare($sql);
+        $query->execute();
+    return $query;
+    }
+
+    public function getMovie(string $id){
+        $sql = "SELECT * FROM movies
+        WHERE movies.id = {$id}";
+        $query = $this->getPdo()->prepare($sql );
+        $query->execute();
+        return $query->fetchAll(\PDO::FETCH_OBJ);   
+    }
+
+    public function updateMovie(string $id, $name, $date, $synospsis, $picture_movie, $picture_banner, $trailer, $story){
+        $sql = "UPDATE `movies` 
+                SET `name`='$name',
+                    `date`='$date',
+                    `synospsis`='$synospsis',
+                    `picture_movie`='$picture_movie',
+                    `picture_banner`='$picture_banner',
+                    `trailer`='$trailer',
+                    `story`='$story' 
+                WHERE movies.id = {$id}";
+        $query = $this->getPdo()->prepare($sql);
+        $query->execute();
+        return $query;
+    }
+
 }
