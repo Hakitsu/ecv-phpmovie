@@ -21,6 +21,7 @@ class Web
         $actors = new ActorsController();
 
         $galery = new GaleryController();
+
         $users = new UserController();
 
         // Appel la méthode « home » dans le contrôleur $main.
@@ -40,6 +41,10 @@ class Web
         Route::Add('/register',[$main, 'register']);
         Route::Add('/create_register',[$users, 'addUser']);
         Route::Add('/admin',[$main, 'admin']);
+        Route::Add('/add_movie',[$main, 'add_movie']);
+        Route::Add('/delete_movie',[$main, 'delete_movie']);
+        Route::Add('/update_movie',[$main, 'update_movie']);
+        Route::Add('/create_movie',[$movies, 'createMovie']);
         
 
         // Appel la fonction inline dans le routeur.

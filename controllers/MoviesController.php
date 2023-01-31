@@ -29,6 +29,21 @@ class MoviesController extends WebController
         return Template::render("views/global/movie.php",  array('galeryByMovie' => $galeryByMovie));  
     }
 
-    
-  
+    function createMovie(){
+        $name = $_POST['name'];
+        $date = $_POST['date'];
+        $synospsis = $_POST['synopsis'];
+        $picture_movie = $_POST['picture_movie'];
+        $picture_banner = $_POST['picture_banner'];
+        $trailer = $_POST['trailer'];
+        $story = $_POST['story'];
+
+        $movie = $this->moviesModel->createMovie($name, $date, $synospsis, $picture_movie, $picture_banner, $trailer, $story);
+        if ($movie == false) {
+            header('Location: add_movie?error');
+        }else{
+            header('Location: admin');
+        }
+
+    }
 }
