@@ -1,0 +1,64 @@
+@media (min-width: 760px) {   
+    .linkToAdmin {
+        width: 15rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        border: 1px solid grey;
+        background-color: white;
+        padding: 0.5rem;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .linkToAdmin:hover {
+        background-color: black;
+        color: white !important;  
+    }
+
+    .linkContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+
+
+ }
+ 
+ @media (max-width: 760px) {
+    
+    .linkToAdmin {
+        width:80%;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        border: 1px solid grey;
+        background-color: white;
+        padding: 0.5rem;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .linkToAdmin:hover {
+        background-color: black;
+        color: white;  
+    }
+
+    textarea {
+        margin-top: 1rem;
+        border: solid 1px black;
+        border-radius: 10px;
+        height: 7rem;
+    }
+
+    .linkContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        padding-bottom: 2rem;
+        
+    }
+
+   
+ }
+ 
