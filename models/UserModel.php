@@ -11,7 +11,7 @@ class UserModel extends SQL
   }
 
   function sessionUser($username){
-    $sql = "SELECT username, `password`, `role` FROM users WHERE username = ?";
+    $sql = "SELECT id, username, `password`, `role` FROM users WHERE username = ?";
     $query = $this->getPdo()->prepare($sql);
     $query->execute(array($username));
     return $query;

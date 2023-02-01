@@ -40,6 +40,7 @@ class UserController extends WebController
                 session_destroy();
                 session_start();
                 $_SESSION['login'] = $username;
+                $_SESSION['id_user'] = $user->id;
                 $_SESSION['role'] = $user->role;
                 header("Location: ./");
             }else{

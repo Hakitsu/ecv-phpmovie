@@ -89,6 +89,16 @@
             }
         ?>
     </div>
+    
+    <div>
+        <div>
+            Ajouter un commentaire : 
+        </div>
+        <form action="add_comment" method="post">
+            <input type="hidden" name="id_movie" value="<?= $movie[0]->id ?>">
+            <textarea name="comment" id="comment" rows="5" style="width : 40%"></textarea>
+        </form>
+    </div>
 
     <h3>Commentaires (
         <?php
@@ -100,6 +110,8 @@
         ?>
         )
     </h3>
+    
+
     <div class="comments">
         <?php
             $get_username = '';
