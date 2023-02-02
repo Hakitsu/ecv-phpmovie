@@ -1,3 +1,5 @@
+<div class="containerFormulaire">
+<h1>Formulaire de création d'un film</h1>
 <form action="create_movie" method="post">
     <div class="inputConnexionContainer">
         <label for="name">Nom :</label>
@@ -39,3 +41,4 @@
         <input type="submit" value="Ajouter le film" class="submitButton"  >
     </div>
 </form>
+</div>

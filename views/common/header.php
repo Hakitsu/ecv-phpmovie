@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="./public/style/galery.css">
     <link rel="stylesheet" href="../public/style/connexion.css">
     <link rel="stylesheet" href="./public/style/connexion.css">
+    <link rel="stylesheet" href="../public/style/admin.css">
+    <link rel="stylesheet" href="./public/style/admin.css">
    
 
 </head>

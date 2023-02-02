@@ -55,6 +55,31 @@
         font-weight: 700;
     }
 
+    .textComment{
+        width: 50%;
+       border-radius: 10px;
+    }
+
+    .submitButtonComment{
+        width: fit-content;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        border: 1px solid grey;
+        background-color: white;
+        padding: 0.5rem;
+        border-radius: 10px;
+    }
+
+    .submitButtonComment:hover {
+        background-color: black;
+        color: white;  
+    }
+
+    .addComment {
+        display: flex;
+        flex-direction: column;
+    }
+
 
 
     
@@ -97,6 +122,32 @@
     .user {
         padding-bottom: 0.5rem;
         font-weight: 700;
+    }
+
+    .textComment{
+        width: 90%;
+       border-radius: 10px;
+    }
+
+    .submitButtonComment{
+        width: fit-content;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        border: 1px solid grey;
+        background-color: white;
+        padding: 0.5rem;
+        border-radius: 10px;
+    }
+
+    .submitButtonComment:hover {
+        background-color: black;
+        color: white;  
+    }
+
+    .addComment {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
 }
