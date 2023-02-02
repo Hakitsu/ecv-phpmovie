@@ -90,18 +90,7 @@
         ?>
     </div>
     
-    <div>
-        <div>
-            Ajouter un commentaire : 
-        </div>
-        <form action="add_comment" method="post">
-            <input type="hidden" name="id_movie" value="<?= $movie[0]->id ?>">
-            <input type="hidden" name="id_user" value="<?= $_SESSION['id_user'] ?>">
-            <textarea name="comment" id="comment" rows="5" style="width : 40%"></textarea>
-            <input type="submit" value="Commenter">
-        </form>
-    </div>
-
+    
     <h3>Commentaires (
         <?php
         if (!empty($comments['comment'][0])) {
@@ -110,10 +99,10 @@
             echo '0';
         }
         ?>
-        )
+        ) :
     </h3>
     
-
+    
     <div class="comments">
         <?php
             $get_username = '';
@@ -126,8 +115,9 @@
         ?>
         
             <div class="commentContainer">
-                <p class="user"><?php echo $get_username ?> </p>
+                <p class="user">Utilisateur: <?php echo $get_username ?> </p>
                 <div class="comment">
+                    <p>Commentaire:</p>
                     <?php echo $comments['comment'][$i] ?>
                 </div>
             </div>
@@ -139,4 +129,15 @@
 
     </div>                 
    
+    <div >
+        
+        <h3> Ajouter un commentaire : </h3> 
+        
+        <form action="add_comment" method="post" class="addComment">
+            <input type="hidden" name="id_movie" value="<?= $movie[0]->id ?>">
+            <input type="hidden" name="id_user" value="<?= $_SESSION['id_user'] ?>">
+            <textarea name="comment" id="comment" rows="5"  class="textComment" placeholder="Ce film est super bien !"></textarea>
+            <input type="submit" value="Ajouter le commentaire" class="submitButtonComment">
+        </form>
+    </div>
 </div>

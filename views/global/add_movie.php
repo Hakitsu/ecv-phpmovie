@@ -1,4 +1,4 @@
-<div class="container">
+<div class="containerFormulaire">
 <h1>Formulaire de création d'un film</h1>
 <form action="create_movie" method="post">
     <div class="inputConnexionContainer">

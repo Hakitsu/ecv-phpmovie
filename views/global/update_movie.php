@@ -1,3 +1,5 @@
+<div class="containerFormulaire">
+<h1>Formulaire de modification</h1>
 <form action="update_action" method="post">
     <input type="hidden" name="id" value="<?=$movies[0]->id ?>">
     <div class="inputConnexionContainer">
@@ -40,3 +42,4 @@
         <input type="submit" value="Modifier le film" class="submitButton"  >
     </div>
 </form>
+</div>
