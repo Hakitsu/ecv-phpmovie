@@ -63,19 +63,36 @@ class MoviesModel extends SQL
         return $query->fetchAll(\PDO::FETCH_OBJ);   
     }
 
-    public function updateMovie(string $id, $name, $date, $synospsis, $picture_movie, $picture_banner, $trailer, $story){
+    public function updateFindById(string $id){
+        $sql = "SELECT * FROM movies 
+        WHERE movies.id = {$id}";
+        $query = $this->getPdo()->prepare($sql );
+        $query->execute();
+        return $query->fetchAll(\PDO::FETCH_OBJ);    
+    }
+
+    public function updateMovie($id, $name, $date, $synospsis, $picture_movie, $picture_banner, $trailer, $story){
+        $id = intval($id);
         $sql = "UPDATE `movies` 
-                SET `name`='$name',
+                SET `name`='".addslashes($name)."',
                     `date`='$date',
-                    `synospsis`='$synospsis',
+                    `synospsis`='".addslashes($synospsis)."',
                     `picture_movie`='$picture_movie',
                     `picture_banner`='$picture_banner',
                     `trailer`='$trailer',
-                    `story`='$story' 
-                WHERE movies.id = {$id}";
+                    `story`='".addslashes($story)."'
+                WHERE movies.id = $id";
         $query = $this->getPdo()->prepare($sql);
         $query->execute();
         return $query;
     }
 
+    public function deleteMovie($id){
+        $id = intval($id);
+        $sql = "DELETE FROM `movies`
+                WHERE movies.id = $id";
+        $query = $this->getPdo()->prepare($sql);
+        $query->execute();
+        return $query;
+    }
 }

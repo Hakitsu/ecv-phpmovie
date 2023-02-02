@@ -40,11 +40,12 @@ class Web
         Route::Add('/deconnexion',[$users, 'deconnexion']);
         Route::Add('/register',[$main, 'register']);
         Route::Add('/create_register',[$users, 'addUser']);
-        Route::Add('/admin',[$main, 'admin']);
+        Route::Add('/admin',[$movies, 'listeAdmin']);
         Route::Add('/add_movie',[$main, 'add_movie']);
-        Route::Add('/delete_movie',[$main, 'delete_movie']);
-        Route::Add('/update_movie',[$main, 'update_movie']);
+        Route::Add('/delete_movie',[$movies, 'deleteMovie']);
+        Route::Add('/update_movie',[$movies, 'liste']);
         Route::Add('/create_movie',[$movies, 'createMovie']);
+        Route::Add('/update_action',[$movies, 'updateMovie']);
         
 
         // Appel la fonction inline dans le routeur.
