@@ -96,7 +96,9 @@
         </div>
         <form action="add_comment" method="post">
             <input type="hidden" name="id_movie" value="<?= $movie[0]->id ?>">
+            <input type="hidden" name="id_user" value="<?= $_SESSION['id_user'] ?>">
             <textarea name="comment" id="comment" rows="5" style="width : 40%"></textarea>
+            <input type="submit" value="Commenter">
         </form>
     </div>
 

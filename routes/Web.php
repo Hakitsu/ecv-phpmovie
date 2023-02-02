@@ -46,6 +46,7 @@ class Web
         Route::Add('/update_movie',[$movies, 'liste']);
         Route::Add('/create_movie',[$movies, 'createMovie']);
         Route::Add('/update_action',[$movies, 'updateMovie']);
+        Route::Add('/movies/add_comment',[$movies, 'addComment']);
         
 
         // Appel la fonction inline dans le routeur.

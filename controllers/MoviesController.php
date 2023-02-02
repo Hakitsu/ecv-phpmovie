@@ -83,4 +83,16 @@ class MoviesController extends WebController
             header('Location: admin');
         }
     }
+
+    function addComment(){
+        $id_user = $_POST['id_user'];
+        $id_movie = $_POST['id_movie'];
+        $comment = $_POST['comment'];
+        $addComment = $this->moviesModel->addComment($id_user, $id_movie, $comment);
+        if ($addComment == false) {
+            header('Location: ./movie?id='.$id_movie.'');
+        }else{
+            header('Location: ./movie?id='.$id_movie.'');
+        }
+    }
 }

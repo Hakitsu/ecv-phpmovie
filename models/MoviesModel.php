@@ -95,4 +95,17 @@ class MoviesModel extends SQL
         $query->execute();
         return $query;
     }
+
+    public function addComment($id_movie, $id_users, $comment){
+        $get_id_request = "SELECT * FROM comments";
+        $get_id = $this->getPdo()->prepare($get_id_request);
+        $get_id->execute();
+        $id = $get_id->rowCount();
+        $id += 1;
+
+        $sql = "INSERT INTO `comments`(`id`, `id_movie`, `id_users`, `date`, `comment`) 
+                             VALUES ('$id','$id_movie','$id_users',date(now()),'$comment')";
+        $query = $this->getPdo()->prepare($sql);
+        $query->execute();
+    }
 }
