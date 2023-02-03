@@ -49,7 +49,7 @@ class MoviesModel extends SQL
         $id += 1;
 
         $sql = "INSERT INTO `movies`(`id`,`name`, `date`, `synospsis`, `picture_movie`, `picture_banner`, `trailer`, `story`) 
-                             VALUES ('$id','$name','$date','$synospsis','$picture_movie','$picture_banner','$trailer','$story')";
+                             VALUES ('$id','".addslashes($name)."','$date','".addslashes($synospsis)."','$picture_movie','$picture_banner','$trailer','".addslashes($story)."')";
         $query = $this->getPdo()->prepare($sql);
         $query->execute();
     return $query;
