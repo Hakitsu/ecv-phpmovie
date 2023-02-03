@@ -1,3 +1,9 @@
+<?php
+    if (!isset($_SESSION['role']) || $_SESSION['role'] != 'Admin') {
+        header('Location: ./');
+    }
+?>
+
 <div class="containerFormulaire">
     <h1>Administration du site</h1>
     <div class= "linkContainer">
