@@ -104,7 +104,7 @@ class MoviesModel extends SQL
         $id += 1;
 
         $sql = "INSERT INTO `comments`(`id`, `id_movie`, `id_users`, `date`, `comment`) 
-                             VALUES ('$id','$id_movie','$id_users',date(now()),'$comment')";
+                             VALUES ('$id','$id_movie','$id_users',date(now()),'".addslashes($comment)."')";
         $query = $this->getPdo()->prepare($sql);
         $query->execute();
     }

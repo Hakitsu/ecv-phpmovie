@@ -1,7 +1,7 @@
 <div class="containerFormulaire">
     <h1>Administration du site</h1>
     <div class= "linkContainer">
-        <a href="add_movie"  class="linkToAdmin">>Ajouter un film</a>
+        <a href="add_movie"  class="linkToAdmin">Ajouter un film</a>
 
         <h3 class="titleSelect">Sélectionne un film pour pouvoir le modifier </h3>
         <form action="update_movie" method="post"  class="formAdmin">
