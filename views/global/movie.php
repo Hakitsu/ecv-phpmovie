@@ -58,7 +58,11 @@
         <?= $movie[0]->story ?>
     </p>
 
-    
+    <div class="">
+        <div style="text-align: center; padding-top : 3rem">
+            <iframe src="<?=$movie[0]->trailer ?>" frameborder="0"></iframe> 
+        </div>
+    </div>
 
     <div class="actors">
 
